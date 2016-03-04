@@ -10,8 +10,10 @@ public class board extends JFrame implements ActionListener{
 
 	
 	private JButton[] theButtons = new JButton[12];
-	private int turn = 0;
-	
+	private int cpu;
+	private int player;
+	private int cpui = 26;
+	private int playeri = 26;
 			
 	public board(){
 		this.setSize(200, 200);
@@ -37,8 +39,27 @@ public class board extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		JButton tile1 = new JButton();
+		tile1 = (JButton)(arg0.getsource());
+		//System.out.println("Yay");
+		if(arg0.getsource() = theButtons[7];
+		flip();
 		
 	}
+	
+	public void flip(){
+		this.cpu = (int)((Math.random()*13) + 1;
+		this.player = (int)((Math.random()*13) + 1;
+			
+			)
+			
+			public void win(){
+				
+				
+				
+				
+			}
+			
+	
 	
 }
