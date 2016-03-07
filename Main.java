@@ -35,7 +35,17 @@ public class board extends JFrame implements ActionListener{
 
 		}
 	}
-
+	public void flip(){
+		this.cpu = (int)((Math.random()*13) + 1);
+		this.player = (int)((Math.random()*13) + 1);
+}
+	public void win(){
+				
+				
+				
+				
+			}
+			
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
@@ -46,20 +56,5 @@ public class board extends JFrame implements ActionListener{
 		flip();
 		
 	}
-	
-	public void flip(){
-		this.cpu = (int)((Math.random()*13) + 1;
-		this.player = (int)((Math.random()*13) + 1;
-			
-			)
-			
-			public void win(){
-				
-				
-				
-				
-			}
-			
-	
 	
 }
