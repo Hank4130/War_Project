@@ -45,6 +45,19 @@ public class board extends JFrame implements ActionListener{
 				
 				
 			 }
+	public class Card {
+	
+	public final static int ACE = 14;      // Codes for the non-numeric cards.
+        public final static int JACK = 11;    //   Cards 2 through 10 have their 
+        public final static int QUEEN = 12;   //   numerical values for their codes.
+        public final static int KING = 13;
+       
+        card1 = new Card( Card.ACE);  
+        card2 = new Card(2);  
+        card2 = new Card(2);
+        card2 = new Card(2);
+        card2 = new Card(2);
+		
 			
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
