@@ -54,11 +54,18 @@ public class board extends JFrame implements ActionListener{
        
         card1 = new Card( Card.ACE);  
         card2 = new Card(2);  
-        card2 = new Card(2);
-        card2 = new Card(2);
-        card2 = new Card(2);
-		
-			
+        card3 = new Card(3);
+        card4 = new Card(4);
+        card5 = new Card(5);
+        card6 = new Card(6);
+        card7 = new Card(7);
+        card8 = new Card(8);
+        card9 = new Card(9);
+	card10 = new Card(10);	
+	card1 = new Card( Card.JACK);
+	card1 = new Card( Card.QUEEN);
+	card1 = new Card( Card.KING);
+	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
