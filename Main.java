@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 public class board extends JFrame implements ActionListener{
 
-	
+	 
 	private JButton[] theButtons = new JButton[12];
 	private int cpu;
 	private int player;
@@ -23,9 +23,9 @@ public class board extends JFrame implements ActionListener{
 		buildBoard();
 		
 		
-	}
+	 }
 			
-	public void buildBoard() {
+	public void buildBoard(){
 
 		for (int i = 0; i < theButtons.length; i++) {
 			theButtons[i] = new JButton("");
@@ -34,7 +34,7 @@ public class board extends JFrame implements ActionListener{
 			theButtons[i].addActionListener(this);
 
 		}
-	}
+	 }
 	public void flip(){
 		this.cpu = (int)((Math.random()*13) + 1);
 		this.player = (int)((Math.random()*13) + 1);
@@ -44,7 +44,7 @@ public class board extends JFrame implements ActionListener{
 				
 				
 				
-			}
+			 }
 			
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
