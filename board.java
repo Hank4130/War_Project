@@ -18,10 +18,27 @@ public class board extends JFrame implements ActionListener{
 
 	 
 	private JButton[] theButtons = new JButton[12];
-	private int cpu;
-	private int player;
+	private int cpu = 0;
+	private int player = 0;
 	private int cpui = 26;
 	private int playeri = 26;
+	private int king = 13;
+	private int queen = 12;
+	private int jack = 11;
+	private int ace = 14;
+	private int c2 = 2;
+	private int c3 = 3;
+	private int c4 = 4;
+	private int c5 = 5;
+	private int c6 = 6;
+	private int c7 = 7;
+	private int c8 = 8;
+	private int c9 = 9;
+	private int c10 = 10;
+	private int[] ci = new int[26];
+	private int[] pi = new int[26];
+	
+	
 			
 	public board(){
 		this.setSize(200, 200);
@@ -31,9 +48,9 @@ public class board extends JFrame implements ActionListener{
 		buildBoard();
 		
 		
-	 }
+	}
 			
-	public void buildBoard(){
+	public void buildBoard() {
 
 		for (int i = 0; i < theButtons.length; i++) {
 			theButtons[i] = new JButton("");
@@ -42,17 +59,27 @@ public class board extends JFrame implements ActionListener{
 			theButtons[i].addActionListener(this);
 
 		}
-	 }
+	}
+
 	public void flip(){
-		this.cpu = (int)((Math.random()*14) + 2);
-		this.player = (int)((Math.random()*14) + 2);
-}
+			this.cpu = (int)((Math.random()*13) + 1);
+			this.player = (int)((Math.random()*13) + 1);
+		System.out.println(player + " " + cpu);
+		
+	}
 	public void win(){
-				
-				
-				
-				
-			 }
+		if(this. player > this.cpu){
+			
+			this.playeri++;
+			
+		}
+		else if(this.player < this.cpu){
+			
+			
+		}
+		
+	}
+	
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
@@ -62,8 +89,8 @@ public class board extends JFrame implements ActionListener{
 		JButton theRealDude = (JButton) dudeThatGotClicked;
 		if (theButtons[8].isEnabled()){
 			flip();						
-		}
+			}
 		
-	}
+		}
 	
-}
+	}
