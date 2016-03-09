@@ -53,35 +53,16 @@ public class board extends JFrame implements ActionListener{
 				
 				
 			 }
-	public class Card {
 	
-	private int ACE = 14;      // Codes for the non-numeric cards.
-        private int JACK = 11;    //   Cards 2 through 10 have their 
-        private int QUEEN = 12;   //   numerical values for their codes.
-        private int KING = 13;
-       
-        card1 = new Card( Card.ACE);  
-        card2 = new Card(2);  
-        card3 = new Card(3);
-        card4 = new Card(4);
-        card5 = new Card(5);
-        card6 = new Card(6);
-        card7 = new Card(7);
-        card8 = new Card(8);
-        card9 = new Card(9);
-	card10 = new Card(10);	
-	card1 = new Card( Card.JACK);
-	card1 = new Card( Card.QUEEN);
-	card1 = new Card( Card.KING);
-	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		JButton tile1 = new JButton();
-		tile1 = (JButton)(arg0.getsource());
-		//System.out.println("Yay");
-		if(arg0.getsource() = theButtons[7];
-		flip();
+		Object dudeThatGotClicked = arg0.getSource();
+		System.out.println(dudeThatGotClicked.toString());
+		JButton theRealDude = (JButton) dudeThatGotClicked;
+		if (theButtons[8].isEnabled()){
+			flip();						
+		}
 		
 	}
 	
