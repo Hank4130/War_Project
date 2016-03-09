@@ -7,6 +7,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class board extends JFrame implements ActionListener{
+	
+	private ImageIcon[] picts = { new ImageIcon("ace.png"),
+			new ImageIcon("2.png"),new ImageIcon("3.png"),
+			new ImageIcon("4.png"),new ImageIcon("5.png"),
+			new ImageIcon("6.png"),new ImageIcon("7.png"),
+			new ImageIcon("8.png"),new ImageIcon("jack.png"),
+			new ImageIcon("queen.png"),new ImageIcon("king.png"),
+			new ImageIcon("9.png"),new ImageIcon("10.png"), new ImageIcon("blueDeck.png"), new ImageIcon("BrownDeck.png")};
 
 	 
 	private JButton[] theButtons = new JButton[12];
@@ -36,8 +44,8 @@ public class board extends JFrame implements ActionListener{
 		}
 	 }
 	public void flip(){
-		this.cpu = (int)((Math.random()*13) + 1);
-		this.player = (int)((Math.random()*13) + 1);
+		this.cpu = (int)((Math.random()*14) + 2);
+		this.player = (int)((Math.random()*14) + 2);
 }
 	public void win(){
 				
@@ -47,10 +55,10 @@ public class board extends JFrame implements ActionListener{
 			 }
 	public class Card {
 	
-	public final static int ACE = 14;      // Codes for the non-numeric cards.
-        public final static int JACK = 11;    //   Cards 2 through 10 have their 
-        public final static int QUEEN = 12;   //   numerical values for their codes.
-        public final static int KING = 13;
+	private int ACE = 14;      // Codes for the non-numeric cards.
+        private int JACK = 11;    //   Cards 2 through 10 have their 
+        private int QUEEN = 12;   //   numerical values for their codes.
+        private int KING = 13;
        
         card1 = new Card( Card.ACE);  
         card2 = new Card(2);  
