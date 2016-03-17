@@ -39,9 +39,8 @@ public class board extends JFrame implements ActionListener{
 	private int c10 = 10;
 	private int[] ci = new int[26];
 	private int[] pi = new int[26];
-	//Object card2 = imageIcon("2.png");
-	
-
+	private String pw = " You Win the Round! :) ";
+	private String cw = " You Lose the Round :( ";
 			
 	public board(){
 		this.setSize(200, 200);
@@ -89,22 +88,54 @@ public class board extends JFrame implements ActionListener{
 		
 	}
 	public void round(){
+		
+		
 		if(this. player > this.cpu){
 			
 			this.playeri++;
 			this.cpui--;
+			theButtons[4].setText("You Win The Round! :)")
+			theButtons[7].setText("")
+			
 		}
 		else if(this.player < this.cpu){
 			this.cpui++;
 			this.playeri--;
+			theButtons[7].setText("You Lose The Round. :(")
+			theButtons[4].setText("")
+			
 		}
-		
+		else if (this.player = this.cpu){
+			flip();
+		}
+		if(this. player > this.cpu){
+			
+			this.playeri++;
+			this.cpui--;
+			theButtons[4].setText("You Win The Round! :)")
+			theButtons[7].setText("")
+			
+		}
+		else if(this.player < this.cpu){
+			this.cpui++;
+			this.playeri--;
+			theButtons[7].setText("You Lose The Round. :(")
+			theButtons[4].setText("")
+			
+		}
+		else{
+			flip();
+			Round();
+		}
+		// think about using while loop
 		System.out.println(this.playeri + ", " + this.cpui);
 	}
 	
 	
 	public void win(){
-			
+			this.setSize(50, 100);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			if (this.cpui == 0){
 				
 				System.out.println("You Win!");
