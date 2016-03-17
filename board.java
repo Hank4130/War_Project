@@ -77,8 +77,7 @@ public class board extends JFrame implements ActionListener{
 		
 		theButtons[8].setIcon(picts[13]);
 		theButtons[3].setIcon(picts[14]);
-		theButtons[0].setIcon(picts[14]);
-		theButtons[11].setIcon(picts[13]);
+		
 		
 		
 	}
