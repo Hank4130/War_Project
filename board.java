@@ -15,8 +15,9 @@ public class board extends JFrame implements ActionListener{
 			new ImageIcon("8.png"),new ImageIcon("jack.png"),
 			new ImageIcon("queen.png"),new ImageIcon("king.png"),
 			new ImageIcon("9.png"),new ImageIcon("10.png"), new ImageIcon("blueDeck.png"), new ImageIcon("BrownDeck.png")};
-
-	 
+	
+	
+	
 	private JButton[] theButtons = new JButton[12];
 	private int cpu = 0;
 	private int player = 0;
@@ -37,57 +38,87 @@ public class board extends JFrame implements ActionListener{
 	private int c10 = 10;
 	private int[] ci = new int[26];
 	private int[] pi = new int[26];
+	//Object card2 = imageIcon("2.png");
 	
-	
+
 			
 	public board(){
 		this.setSize(200, 200);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLayout(new GridLayout(3, 4));
+		
 		buildBoard();
+		
 		
 		
 	}
 			
+	private Object imageIcon(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void buildBoard() {
 
+		
+		
 		for (int i = 0; i < theButtons.length; i++) {
 			theButtons[i] = new JButton("");
 			theButtons[i].setBackground(Color.WHITE);
 			this.getContentPane().add(theButtons[i]);
 			theButtons[i].addActionListener(this);
+			theButtons[i].setBackground(Color.green);
+			
+			
 
 		}
+		
+		theButtons[8].setIcon(picts[13]);
+		theButtons[3].setIcon(picts[14]);
+		theButtons[0].setIcon(picts[14]);
+		theButtons[11].setIcon(picts[13]);
+		
+		
 	}
-
+	
 	public void flip(){
 			this.cpu = (int)((Math.random()*13) + 1);
 			this.player = (int)((Math.random()*13) + 1);
 		System.out.println(player + " " + cpu);
 		
 	}
-	public void win(){
+	public void round(){
 		if(this. player > this.cpu){
 			
 			this.playeri++;
-			
+			this.cpui--;
 		}
 		else if(this.player < this.cpu){
-			
-			
+			this.cpui++;
+			this.playeri--;
 		}
 		
+		System.out.println(this.playeri + ", " + this.cpui);
 	}
+	
+	
+	public void win(){
+			
+			if (this.cpui == 0){
+				
+				System.out.println("You Win!");
+			}
+		}
 	
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		Object dudeThatGotClicked = arg0.getSource();
-		System.out.println(dudeThatGotClicked.toString());
+		//System.out.println(dudeThatGotClicked.toString());
 		JButton theRealDude = (JButton) dudeThatGotClicked;
-		if (theButtons[8].isEnabled()){
+		if ((theRealDude == theButtons[8]) && theRealDude.isEnabled()){
 			flip();						
 			}
 		
