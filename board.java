@@ -27,7 +27,7 @@ public class board extends JFrame implements ActionListener{
 	private int king = 13;
 	private int queen = 12;
 	private int jack = 11;
-	private int ace = 14;
+	private int ace = 13;
 	private int c2 = 2;
 	private int c3 = 3;
 	private int c4 = 4;
@@ -39,8 +39,7 @@ public class board extends JFrame implements ActionListener{
 	private int c10 = 10;
 	private int[] ci = new int[26];
 	private int[] pi = new int[26];
-	private String pw = " You Win the Round! :) ";
-	private String cw = " You Lose the Round :( ";
+	
 			
 	public board(){
 		this.setSize(200, 200);
@@ -89,51 +88,39 @@ public class board extends JFrame implements ActionListener{
 	}
 	public void round(){
 		
+			
+		if(player > cpu){
+			
+			this.playeri+=1;
+			this.cpui-=1;
+			update();
+			//theButtons[7].setText("");
+			System.out.println("you win");
+			//JOptionPane.showMessageDialog(null, "black wins");
+		}
+		else if(this.player < this.cpu){
+			this.cpui+=1;
+			this.playeri-=1;
+			update();
+	//		theButtons[7].setText("You have " + "");
+		//	theButtons[4].setText("");
+			//JOptionPane.showMessageDialog(null, "black wins");
+		}
+		else if (this.player == this.cpu){
+			flip();
+		}
 		
-		if(this. player > this.cpu){
-			
-			this.playeri++;
-			this.cpui--;
-			theButtons[4].setText("You Win The Round! :)")
-			theButtons[7].setText("")
-			
-		}
-		else if(this.player < this.cpu){
-			this.cpui++;
-			this.playeri--;
-			theButtons[7].setText("You Lose The Round. :(")
-			theButtons[4].setText("")
-			
-		}
-		else if (this.player = this.cpu){
-			flip();
-		}
-		if(this. player > this.cpu){
-			
-			this.playeri++;
-			this.cpui--;
-			theButtons[4].setText("You Win The Round! :)")
-			theButtons[7].setText("")
-			
-		}
-		else if(this.player < this.cpu){
-			this.cpui++;
-			this.playeri--;
-			theButtons[7].setText("You Lose The Round. :(")
-			theButtons[4].setText("")
-			
-		}
-		else{
-			flip();
-			Round();
-		}
 		// think about using while loop
 		System.out.println(this.playeri + ", " + this.cpui);
 	}
+	public void update() {
 	
+		theButtons[7].setText(cpui + " cerds");
+		theButtons[4].setText(playeri + " cerds");
+	}
 	
 	public void win(){
-			this.setSize(50, 100);
+			this.setSize(800, 480);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			if (this.cpui == 0){
@@ -150,7 +137,8 @@ public class board extends JFrame implements ActionListener{
 		//System.out.println(dudeThatGotClicked.toString());
 		JButton theRealDude = (JButton) dudeThatGotClicked;
 		if ((theRealDude == theButtons[8]) && theRealDude.isEnabled()){
-			flip();						
+			flip();	
+			round();
 			}
 		
 		}
