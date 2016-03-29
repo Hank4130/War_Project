@@ -120,7 +120,7 @@ public class board extends JFrame implements ActionListener{
 			//JOptionPane.showMessageDialog(null, "black wins");
 		}
 		else if (this.player == this.cpu){
-			flip();
+			flip(); 
 		}
 		
 		// think about using while loop
