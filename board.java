@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 public class board extends JFrame implements ActionListener{
 	
-	private ImageIcon[] picts = {new ImageIcon("2.png") 
+private ImageIcon[] picts = {new ImageIcon("2.png") 
 			,new ImageIcon("3.png"),new ImageIcon("4.png"),
 			new ImageIcon("5.png"),new ImageIcon("6.png"),
 			new ImageIcon("7.png"),new ImageIcon("8.png"),
@@ -39,17 +39,38 @@ public class board extends JFrame implements ActionListener{
 	private int c8 = 7;
 	private int c9 = 8;
 	private int c10 = 9;*/
-	private int[] ci = new int[26];
-	private int[] pi = new int[26];
+	private int[] ci = new int[cpui];
+	private int[] pi = new int[playeri];
 	
 	public void inventory(){
-		for (int o=0; o<ci.length; o++){			
-				for (int i =0; i<ci.length / 2; i++){
-			ci[i] = 2+i;
-			pi[i] = 2+i;
-			
-		}
-		}
+	
+	ci[1] = 2;  	pi[1] = 2;
+	ci[2] = 2;	pi[2] = 2;
+	ci[3] = 3;	pi[4] = 3;
+	ci[4] = 3;	pi[3] = 3;
+	ci[5] = 4;	pi[5] = 4;
+	ci[6] = 4;	pi[6] = 4;
+	ci[7] = 5;	pi[7] = 5;
+	ci[8] = 5;	pi[8] = 5;
+	ci[9] = 6;	pi[9] = 6;
+	ci[10] = 6;	pi[10] = 6;
+	ci[11] = 7;	pi[11] = 7;
+	ci[12] = 7;	pi[12] = 7;
+	ci[13] = 8;	pi[13] = 8;
+	ci[14] = 8;	pi[14] = 8;
+	ci[15] = 9;	pi[15] = 9;
+	ci[16] = 9;	pi[16] = 9;
+	ci[17] = 10;	pi[17] = 10;	
+	ci[18] = 10;	pi[18] = 10;	
+	ci[19] = 11;	pi[19] = 11;	
+	ci[20] = 11;	pi[20] = 11;	
+	ci[21] = 12;	pi[21] = 12;	
+	ci[22] = 12;	pi[22] = 12;	
+	ci[23] = 13;	pi[23] = 13;	
+	ci[24] = 13;	pi[24] = 13;	
+	ci[25] = 14;	pi[25] = 14;	
+	ci[26] =  14;	pi[26] =  14;		
+										
 	}
 	
 	
@@ -77,7 +98,7 @@ public class board extends JFrame implements ActionListener{
 			this.getContentPane().add(theButtons[i]);
 			theButtons[i].addActionListener(this);
 			theButtons[i].setBackground(Color.green);
-			
+			theButtons[i].setBorder((Border) Color.green);
 			
 
 		}
@@ -120,7 +141,7 @@ public class board extends JFrame implements ActionListener{
 			//JOptionPane.showMessageDialog(null, "black wins");
 		}
 		else if (this.player == this.cpu){
-			flip(); 
+			flip();
 		}
 		
 		// think about using while loop
