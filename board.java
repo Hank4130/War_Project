@@ -170,7 +170,7 @@ private ImageIcon[] picts = {new ImageIcon("2.png")
 		        clip.open(audioInputStream);
 		        clip.start();
 		    } catch(Exception ex) {
-		        System.out.println("Error with playing sound.");
+		        System.out.println("make sure the files are uploaded correctly so that the sound can play also make sure the the file is properly being directed to elcipse");
 		        ex.printStackTrace();
 		    }
 		}
